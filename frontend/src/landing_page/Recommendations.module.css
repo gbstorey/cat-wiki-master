@@ -1,0 +1,53 @@
+.container {
+    background-color: #E3E1DC;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 40px 0;
+    position: relative;
+}
+
+.contentContainer {
+    padding: 0 10%;
+}
+
+.contentContainer h1 {
+    max-width: 537px;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.contentContainer h2 {
+    color: #291507;
+    font-size: 18px;
+}
+
+.contentContainer h3 {
+    display: inline;
+    color: #29150799;
+}
+
+.contentContainer hr {
+    color: #291507;
+    width: 59px;
+    margin-left: 0;
+    background-color: #291507;
+    height: 3px;
+    border-radius: 77px;
+    border: 0;
+}
+
+.contentContainer a {
+    position: absolute;
+    right: 10%;
+    display: inline;
+    text-decoration: none;
+    color: #29150799;
+}
+
+.flexContainer {
+    margin: 46px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 51px;
+    justify-content: space-between;
+}

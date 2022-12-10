@@ -1,0 +1,12 @@
+.catImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.catName {
+    margin-top: 20px;
+    color: #291507;
+    font-weight: 600;
+}
