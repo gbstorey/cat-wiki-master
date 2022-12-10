@@ -1,0 +1,50 @@
+.hero {
+    background: url("../../public/images/HeroImagelg.png") no-repeat center;
+    background-size: auto 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: 538px;
+    align-content: center;
+    position: relative;
+}
+
+.heroBlock {
+    position:absolute;
+    width: 23rem;
+    left: 10%;
+    top: 115px;
+}
+
+.heroBlock img{
+    filter: invert(99%) sepia(8%) saturate(358%) hue-rotate(278deg) brightness(117%) contrast(100%);
+    width: 15rem;
+    height: 6rem;
+}
+
+.heroBlock input{
+    background-color:white;
+    color:#291507;
+    width: 85%;
+    border-radius: 1000px;
+    padding: 20px 20px;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heroBlock input:focus{
+    border-color: transparent;
+}
+
+.inputIcons {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 52px;
+}
+
+.inputIcons i {
+    position: absolute;
+    top: 83%;
+    right: 0;
+    color: #291507;
+    min-width: 50px;
+}
