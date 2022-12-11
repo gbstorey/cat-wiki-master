@@ -1,5 +1,6 @@
 import RecommendationItem from "./RecommendationItem";
 import classes from "./Recommendations.module.css"
+import MiniHorizontalRule from "../UI/MiniHorizontalRule";
 const DUMMY_CATS = [
     {
         id: 1,
@@ -29,7 +30,7 @@ const Recommendations = () => {
             <div className={classes.container}>
                 <div className={classes.contentContainer}>
                     <h2>Most Searched Breeds</h2>
-                    <hr />
+                    <MiniHorizontalRule />
                 </div>
                 <div className={classes.contentContainer}>
                     <h1>66+ Breeds For you to discover</h1>

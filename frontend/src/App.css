@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 0 96px;
   font-family: 'Montserrat', sans-serif;
+  color: #291507;
 }
 
 h2 {
@@ -12,7 +13,12 @@ h2 {
 }
 
 h1 {
-  color: #291507;
   font-weight: 700;
   font-size: 48px;
+}
+
+p {
+  color: #291507;
+  font-size: 18px;
+  font-weight: 500;
 }

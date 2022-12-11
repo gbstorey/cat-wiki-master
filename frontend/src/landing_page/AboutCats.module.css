@@ -1,0 +1,72 @@
+.container {
+    padding: 40px 0;
+    position: relative;
+}
+
+.contentContainer {
+    width: 26rem;
+}
+
+.contentContainer h1,h2,h3,p,a{
+    margin: 0;
+}
+
+.contentContainer h1{
+    padding-bottom: 44px;
+}
+
+.contentContainer p{
+    padding-bottom: 66px;
+}
+
+.contentContainer a {
+    position: absolute;
+    display: inline;
+    text-decoration: none;
+    color: #29150799;
+}
+
+.contentContainer h3 {
+    display: inline;
+    color: #29150799;
+}
+
+.aboutBlock {
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 176px 10%;
+    justify-content: end;
+    gap: 1px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 80%;
+    max-width: 26%;
+    padding: 0 4px;
+    position: relative;
+    text-align: right;
+}
+
+.column img {
+    margin-top: 8px;
+}
+
+.catImage3 {
+    width: 100%;
+}
+
+.catImage2 {
+    width: 100%;
+}
+
+.catImage1 {
+    width: 70%;
+    position: relative;
+}
+
+
