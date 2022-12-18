@@ -61,6 +61,18 @@
     max-height: 200px;
     -ms-overflow-style: none;
     overflow: hidden;
+    position: relative;
+}
+
+.searchCard a{
+    color: #040706;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.searchCard a:hover {
+    animation: slowSelect 200ms ease-in-out forwards;
 }
 
 .searchCard::-webkit-scrollbar {
@@ -77,10 +89,22 @@
     0% {
         opacity: 0;
         transform: translateY(-60px);
+        pointer-events: none;
     }
 
     100% {
         opacity: 1;
         transform: translateY(0);
+        pointer-events: all;
+    }
+}
+
+@keyframes slowSelect {
+    0% {
+        background-color: rgba(224, 229, 227, 0);
+    }
+
+    100% {
+        background-color: rgba(224, 229, 227, 1);
     }
 }

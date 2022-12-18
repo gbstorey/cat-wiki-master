@@ -20,7 +20,9 @@ const BreedSearch = () => {
     searchContent = (
       <div className={classes.searchCard}>
         {filteredData.map((cat) => {
-          return <p key={cat.id}>{cat.name}</p>;
+          return (
+              <a key={cat.id} href={cat.link} target={"_blank"}>{cat.name}</a>
+          );
         })}
       </div>
     );
@@ -36,10 +38,9 @@ const BreedSearch = () => {
           value={breedInputData}
           placeholder={"Enter your breed"}
           onFocus={() => setSearchFocused(true)}
-          onBlur={() => setSearchFocused(false)}
+          onBlur={() => setTimeout(() => setSearchFocused(false), 500)}
           onChange={onChangeHandler}
         />
-        <i className={`fa-solid fa-magnifying-glass ${classes.icon}`}></i>
       </div>
       {searchFocused ? searchContent : null}
     </>
