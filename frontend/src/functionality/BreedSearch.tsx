@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import classes from "../landing_page/Hero.module.css";
-import useCatNames from "../util/use-cat-names";
-import useFilterNames from "../util/use-filter-names";
+import classes from "../components/landing_page/Hero.module.css";
+import useCatNames from "../components/util/use-cat-names";
+import useFilterNames from "../components/util/use-filter-names";
 
 const BreedSearch = () => {
   const [searchFocused, setSearchFocused] = useState(false);
