@@ -1,0 +1,31 @@
+.footer {
+    background-color: #040706;
+    padding: 20px 10%;
+    border-top-right-radius: 42px;
+    border-top-left-radius: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img {
+    filter: invert(99%) sepia(8%) saturate(358%) hue-rotate(278deg) brightness(117%) contrast(100%);
+}
+
+.footer i {
+    color: white;
+    padding: 4px 10px 0 0;
+}
+
+.footer p {
+    display: inline;
+    color: white;
+    font-weight: 200;
+}
+
+.footer a {
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}

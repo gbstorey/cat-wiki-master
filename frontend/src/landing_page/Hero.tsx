@@ -1,18 +1,17 @@
-import React, {useRef} from "react";
-import classes from "./Hero.module.css"
+import React from "react";
+import classes from "./Hero.module.css";
+import BreedSearch from "../functionality/BreedSearch";
 
 const Hero = () => {
-    const breedRef = useRef(null);
-    return <section className={classes.hero} id={"hero"}>
-        <div className={classes.heroBlock}>
-            <img src={"/images/Catwikilogo.svg"} alt={"Cat Wiki Logo"}/>
-            <h2>Get to know more about your cat breed</h2>
-            <div className={classes.inputIcons}>
-                <input type={"text"} name={"breed"} id={"breed"} placeholder={"Enter your breed"} ref={breedRef}/>
-                <i className={`fa-solid fa-magnifying-glass ${classes.icon}`}></i>
-            </div>
-        </div>
+  return (
+    <section className={classes.hero} id={"hero"}>
+      <div className={classes.heroBlock}>
+        <img src={"/images/cat_wiki_logo.svg"} alt={"Cat Wiki Logo"} />
+        <h2>Get to know more about your cat breed</h2>
+        <BreedSearch />
+      </div>
     </section>
-}
+  );
+};
 
 export default Hero;

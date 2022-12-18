@@ -1,5 +1,5 @@
 .hero {
-    background: url("../../public/images/HeroImagelg.png") no-repeat center;
+    background: url("/images/HeroImagelg.png") no-repeat center;
     background-size: auto 100%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -9,10 +9,11 @@
 }
 
 .heroBlock {
-    position:absolute;
+    position:relative;
     width: 23rem;
     left: 10%;
     top: 115px;
+    z-index: 1
 }
 
 .heroBlock img{
@@ -24,7 +25,7 @@
 .heroBlock input{
     background-color:white;
     color:#291507;
-    width: 85%;
+    width: 89%;
     border-radius: 1000px;
     padding: 20px 20px;
     border: 0;
@@ -47,4 +48,39 @@
     right: 0;
     color: #291507;
     min-width: 50px;
+}
+
+.searchCard {
+    color:#291507;
+    background-color:white;
+    border-radius: 35px;
+    padding: 20px 20px;
+    z-index: 1;
+    animation: slideDown 400ms ease-in-out forwards;
+    transform-origin: top center;
+    max-height: 200px;
+    -ms-overflow-style: none;
+    overflow: hidden;
+}
+
+.searchCard::-webkit-scrollbar {
+    display: none;
+}
+
+.searchCard:hover{
+    overflow-y: scroll;
+}
+
+
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

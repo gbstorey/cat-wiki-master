@@ -6,6 +6,10 @@
   color: #291507;
 }
 
+body {
+  margin: 0
+}
+
 h2 {
   color: #FFFFFF;
   font-weight: 500;
