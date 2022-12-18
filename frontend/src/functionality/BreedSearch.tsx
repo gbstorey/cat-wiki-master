@@ -20,8 +20,9 @@ const BreedSearch = () => {
     searchContent = (
       <div className={classes.searchCard}>
         {filteredData.map((cat) => {
+          const link = cat.vcahospitals_url || cat.vetstreet_url || cat.cfa_url;
           return (
-              <a key={cat.id} href={cat.link} target={"_blank"}>{cat.name}</a>
+              <a key={cat.id} href={link} target={"_blank"}>{cat.name}</a>
           );
         })}
       </div>
