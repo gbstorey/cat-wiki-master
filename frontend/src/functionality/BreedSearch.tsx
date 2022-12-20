@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import classes from "../components/landing_page/Hero.module.css";
-import useCatNames from "../components/util/use-cat-names";
 import useFilterNames from "../components/util/use-filter-names";
+import axios from "axios";
+import {useLoaderData} from "react-router-dom";
 
-const BreedSearch = () => {
+type BreedName = {
+  id: string;
+  name: string;
+  vcahospitals_url: string;
+  cfa_url: string;
+  vetstreet_url: string;
+};
+
+const BreedSearch: React.FC = () => {
   const [searchFocused, setSearchFocused] = useState(false);
   const [breedInputData, setBreedInputData] = useState("");
 
@@ -11,7 +20,8 @@ const BreedSearch = () => {
     setBreedInputData(e.target.value);
   };
 
-  const nameData = useCatNames();
+  const nameData = useLoaderData() as BreedName[]
+
   const filteredData = useFilterNames(nameData, breedInputData);
 
   let searchContent = null;
@@ -20,9 +30,11 @@ const BreedSearch = () => {
     searchContent = (
       <div className={classes.searchCard}>
         {filteredData.map((cat) => {
-          const link = cat.vcahospitals_url || cat.vetstreet_url || cat.cfa_url;
+          const link = "/breed/" + cat.id;
           return (
-              <a key={cat.id} href={link} target={"_blank"}>{cat.name}</a>
+            <a key={cat.id} href={link}>
+              {cat.name}
+            </a>
           );
         })}
       </div>

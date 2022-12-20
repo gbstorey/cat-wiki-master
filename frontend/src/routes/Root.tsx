@@ -1,5 +1,5 @@
 import './Root.css'
-import Navbar from "../components/landing_page/Navbar";
+import RootLayout from "../components/UI/RootLayout";
 import Hero from "../components/landing_page/Hero";
 import Recommendations from "../components/landing_page/Recommendations";
 import AboutCats from "../components/landing_page/AboutCats";
@@ -9,7 +9,6 @@ function Root() {
 
   return (
     <>
-        <Navbar />
         <Hero />
         <Recommendations />
         <AboutCats />

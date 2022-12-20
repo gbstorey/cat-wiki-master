@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 0 96px;
   font-family: 'Montserrat', sans-serif;
-  color: #291507;
 }
 
 body {
@@ -11,7 +10,6 @@ body {
 }
 
 h2 {
-  color: #FFFFFF;
   font-weight: 500;
   margin: 0 auto;
 }
@@ -22,7 +20,6 @@ h1 {
 }
 
 p {
-  color: #291507;
   font-size: 18px;
   font-weight: 500;
 }

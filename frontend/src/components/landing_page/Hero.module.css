@@ -10,10 +10,10 @@
 
 .heroBlock {
     position:relative;
-    width: 23rem;
+    width: 18rem;
     left: 10%;
     top: 115px;
-    z-index: 1
+    z-index: 1;
 }
 
 .heroBlock img{
