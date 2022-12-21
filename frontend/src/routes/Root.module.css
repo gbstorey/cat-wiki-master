@@ -1,0 +1,10 @@
+.centralFrame {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 96px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body:global {
+  margin: 0;
+}

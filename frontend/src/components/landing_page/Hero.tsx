@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <section className={classes.hero} id={"hero"}>
       <div className={classes.heroBlock}>
-        <img src={"/images/cat_wiki_logo.svg"} alt={"Cat Wiki Logo"} />
-        <h2>Get to know more about your cat breed</h2>
+        <img className={classes.catBackground} src={"/images/cat_wiki_logo.svg"} alt={"Cat Wiki Logo"} />
+        <h2 className={classes.heroSubHeader}>Get to know more about your cat breed</h2>
         <BreedSearch />
       </div>
     </section>

@@ -29,14 +29,14 @@ const Recommendations = () => {
         <section id={"recommendations"}>
             <div className={classes.container}>
                 <div className={classes.contentContainer}>
-                    <h2>Most Searched Breeds</h2>
+                    <h2 className={classes.subHeader}>Most Searched Breeds</h2>
                     <MiniHorizontalRule />
                 </div>
                 <div className={classes.contentContainer}>
-                    <h1>66+ Breeds For you to discover</h1>
-                    <a href={"/"}>
-                        <h3>See More </h3>
-                        <i className="fa-solid fa-arrow-right"></i>
+                    <h1 className={classes.header}>66+ Breeds For you to discover</h1>
+                    <a href={"/"} className={classes.seeMoreLink}>
+                        <h3 className={classes.seeMoreText}>See More </h3>
+                        <i className={`fa-solid fa-arrow-right ${classes.seeMoreIcon}`}></i>
                     </a>
                 </div>
                 <div className={`${classes.contentContainer} ${classes.flexContainer}`}>

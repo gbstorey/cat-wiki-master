@@ -10,101 +10,21 @@
 
 .heroBlock {
     position:relative;
-    width: 18rem;
+    width: 23rem;
     left: 10%;
     top: 115px;
     z-index: 1;
 }
 
-.heroBlock img{
+.heroSubHeader {
+    color: white;
+    font-size: 24px;
+    padding-bottom: 50px;
+    font-weight: 500;
+}
+
+.catBackground{
     filter: invert(99%) sepia(8%) saturate(358%) hue-rotate(278deg) brightness(117%) contrast(100%);
     width: 15rem;
     height: 6rem;
-}
-
-.heroBlock input{
-    background-color:white;
-    color:#291507;
-    width: 89%;
-    border-radius: 1000px;
-    padding: 20px 20px;
-    border: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.heroBlock input:focus{
-    border-color: transparent;
-}
-
-.inputIcons {
-    width: 100%;
-    margin-bottom: 10px;
-    margin-top: 52px;
-}
-
-.inputIcons i {
-    position: absolute;
-    top: 83%;
-    right: 0;
-    color: #291507;
-    min-width: 50px;
-}
-
-.searchCard {
-    color:#291507;
-    background-color:white;
-    border-radius: 35px;
-    padding: 20px 20px;
-    z-index: 1;
-    animation: slideDown 400ms ease-in-out forwards;
-    transform-origin: top center;
-    max-height: 200px;
-    -ms-overflow-style: none;
-    overflow: hidden;
-    position: relative;
-}
-
-.searchCard a{
-    color: #040706;
-    text-decoration: none;
-    display: block;
-    padding: 5px 0;
-}
-
-.searchCard a:hover {
-    animation: slowSelect 200ms ease-in-out forwards;
-}
-
-.searchCard::-webkit-scrollbar {
-    display: none;
-}
-
-.searchCard:hover{
-    overflow-y: scroll;
-}
-
-
-
-@keyframes slideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-60px);
-        pointer-events: none;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: all;
-    }
-}
-
-@keyframes slowSelect {
-    0% {
-        background-color: rgba(224, 229, 227, 0);
-    }
-
-    100% {
-        background-color: rgba(224, 229, 227, 1);
-    }
 }

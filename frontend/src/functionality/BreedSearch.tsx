@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
-import classes from "../components/landing_page/Hero.module.css";
+import React, {useState} from "react";
+import classes from "../functionality/BreedSearch.module.css"
 import useFilterNames from "../components/util/use-filter-names";
-import axios from "axios";
 import {useLoaderData} from "react-router-dom";
 
 type BreedName = {
@@ -32,7 +31,7 @@ const BreedSearch: React.FC = () => {
         {filteredData.map((cat) => {
           const link = "/breed/" + cat.id;
           return (
-            <a key={cat.id} href={link}>
+            <a key={cat.id} href={link} className={classes.searchCardLink}>
               {cat.name}
             </a>
           );
@@ -45,6 +44,7 @@ const BreedSearch: React.FC = () => {
     <>
       <div className={classes.inputIcons}>
         <input
+            className={classes.breedInput}
           type={"text"}
           name={"breed"}
           id={"breed"}

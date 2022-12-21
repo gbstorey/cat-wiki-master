@@ -10,38 +10,34 @@
     padding: 0 10%;
 }
 
-.contentContainer h1 {
+.header {
+    font-size: 48px;
     max-width: 537px;
-    margin: 0;
-    padding-top: 20px;
+    padding-top: 36px;
 }
 
-.contentContainer h2 {
+.subHeader{
     color: #291507;
+    font-weight: 500;
     font-size: 18px;
+    padding-bottom: 8px;
 }
 
-.contentContainer h3 {
+.seeMoreText {
     display: inline;
     color: #29150799;
 }
 
-.contentContainer hr {
-    color: #291507;
-    width: 59px;
-    margin-left: 0;
-    background-color: #291507;
-    height: 3px;
-    border-radius: 77px;
-    border: 0;
-}
-
-.contentContainer a {
+.seeMoreLink {
     position: absolute;
     right: 10%;
     display: inline;
     text-decoration: none;
     color: #29150799;
+}
+
+.seeMoreIcon {
+    display: inline;
 }
 
 .flexContainer {

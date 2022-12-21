@@ -1,4 +1,6 @@
-nav {
-    padding-top:36px;
-    padding-bottom: 30px;
+.nav {
+    margin: 0 auto;
+    max-width: 1248px;
+    padding: 30px 96px;
+
 }

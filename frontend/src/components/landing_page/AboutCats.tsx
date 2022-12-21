@@ -10,10 +10,10 @@ const AboutCats = () => {
         <div className={classes.row}>
             <div className={`${classes.contentContainer} ${classes.aboutBlock}`}>
                 <MiniHorizontalRule />
-                <h1>{aboutHeadline}</h1>
-                <p>{aboutParagraph}</p>
-                <a href={"/"}>
-                    <h3>Read More</h3>
+                <h1 className={classes.header}>{aboutHeadline}</h1>
+                <p className={classes.body}>{aboutParagraph}</p>
+                <a href={"/"} className={classes.link}>
+                    <h3 className={classes.linkText}>Read More </h3>
                     <i className="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
