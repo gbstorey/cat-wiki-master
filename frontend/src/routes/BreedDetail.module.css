@@ -1,0 +1,98 @@
+.sectionContainer {
+    max-width: 1248px;
+    position: relative;
+}
+
+.detailContainer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    margin: 0 50px;
+    position:relative;
+}
+
+.detailShape {
+    width: 84px;
+    height: 280px;
+    background-color: #DEC68B;
+    border-radius: 14px;
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    z-index: -1;
+}
+
+.detailHeader {
+    padding-bottom: 25px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.detailSubHeader {
+    padding-bottom: 32px;
+    font-size: 18px;
+    color: black;
+}
+
+.detailBody {
+    padding-bottom: 32px;
+}
+
+.detailSpan {
+    font-weight: bold;
+}
+
+.detailImage {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.right {
+    flex: 1;
+    max-width: 55%;
+}
+
+.attrContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+.attrDetails {
+    width: 25%;
+    min-width: 180px;
+}
+
+.attrBody {
+    padding-bottom: 1px;
+    display: inline-flex;
+}
+
+.shapeBox {
+    display: inline-flex;
+    height: 30px;
+    gap: 8px;
+    position: relative;
+    padding: 5px;
+}
+
+.shape {
+    flex-shrink: initial;
+    width: 3.5rem;
+    height: 0.7rem;
+    background-color: #544439;
+    border-radius: 8px;
+}
+
+.nullShape {
+    background-color: #dedede;
+}
+
+.photosHeader {
+
+}
