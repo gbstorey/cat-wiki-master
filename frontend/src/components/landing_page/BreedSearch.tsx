@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import classes from "../functionality/BreedSearch.module.css"
-import useFilterNames from "../components/util/use-filter-names";
+import classes from "./BreedSearch.module.css"
+import useFilterNames from "../../util/use-filter-names";
 import {useLoaderData} from "react-router-dom";
 
 type BreedName = {

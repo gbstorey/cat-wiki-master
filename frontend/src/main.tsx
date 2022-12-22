@@ -5,7 +5,7 @@ import { createBrowserRouter, Params, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import ErrorPage from "./ErrorPage";
 import BreedDetail from "./routes/BreedDetail";
-import breedsLoader from "./components/util/breeds-loader";
+import breedsLoader from "./util/breeds-loader";
 import RootLayout from "./components/UI/RootLayout";
 
 type Breed = {

@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Hero.module.css";
-import BreedSearch from "../../functionality/BreedSearch";
+import BreedSearch from "./BreedSearch";
 
 const Hero = () => {
   return (

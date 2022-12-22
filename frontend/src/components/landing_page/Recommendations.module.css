@@ -31,6 +31,7 @@
 .seeMoreLink {
     position: absolute;
     right: 10%;
+    top: 40%;
     display: inline;
     text-decoration: none;
     color: #29150799;
