@@ -1,7 +1,6 @@
 import classes from "./BreedDetail.module.css";
-import { useLoaderData } from "react-router-dom";
-import { useParams } from "react-router";
-import Footer from "../components/landing_page/Footer";
+import { useLoaderData } from "react-router-dom"
+import shortid from "shortid"
 
 type Breed = {
   id: string;
@@ -34,7 +33,7 @@ function constructDetailElements(details: Detail[]) {
   let elements = [];
   for (let detail of details) {
     elements.push(
-      <p className={classes.detailBody}>
+      <p className={classes.detailBody} key={shortid.generate()}>
         <span className={classes.detailSpan}>{detail.string}</span>
         {detail.value}
       </p>
@@ -48,13 +47,13 @@ function constructAttributeElements(attributes: Detail[]) {
   for (let attribute of attributes) {
     let shapes = [];
     for (let i = 0; i < attribute.value; i++) {
-      shapes.push(<div className={classes.shape}></div>);
+      shapes.push(<div className={classes.shape} key={shortid.generate()}></div>);
     }
     for (let j = 0; j< 5-(+attribute.value); j++) {
-      shapes.push(<div className={`${classes.shape} + ${classes.nullShape}`}></div>);
+      shapes.push(<div className={`${classes.shape} + ${classes.nullShape}`} key={shortid.generate()}></div>);
     }
     elements.push(
-      <div className={classes.attrContainer}>
+      <div className={classes.attrContainer} key={shortid.generate()}>
         <div className={classes.attrDetails}>
           <p className={classes.attrBody}>
             <span className={classes.detailSpan}>{attribute.string}</span>
@@ -71,11 +70,7 @@ function constructAttributeElements(attributes: Detail[]) {
 
 const BreedDetail = () => {
   function getBreedData() {
-    const params = useParams();
-    const data = useLoaderData() as Breed[];
-    return data.filter((item) => {
-      return item.id === params.name;
-    })[0];
+    return useLoaderData() as Breed;
   }
   const breed = getBreedData();
   const details = [
@@ -126,8 +121,6 @@ const BreedDetail = () => {
       value: breed.stranger_friendly,
     },
   ];
-
-  console.log(breed);
   return (
     <section className={classes.sectionContainer} id={breed.name}>
       <div className={classes.detailContainer}>

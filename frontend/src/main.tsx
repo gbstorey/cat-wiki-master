@@ -1,21 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, Params, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Root from "./routes/Root";
 import ErrorPage from "./ErrorPage";
 import BreedDetail from "./routes/BreedDetail";
-import breedsLoader from "./util/breeds-loader";
+import {BreedsLoader, SingleBreedLoader} from "./util/breeds-loader";
 import RootLayout from "./components/UI/RootLayout";
-
-type Breed = {
-  id: string;
-  name: string;
-  description: string;
-  vcahospitals_url: string;
-  cfa_url: string;
-  vetstreet_url: string;
-}[];
 
 const router = createBrowserRouter([
   {
@@ -26,12 +17,12 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Root />,
-        loader: breedsLoader,
+        loader: BreedsLoader,
       },
       {
-        path: "/breed/:name",
+        path: "/breed",
         element: <BreedDetail />,
-        loader: breedsLoader,
+        loader: request => SingleBreedLoader(request),
       },
     ],
   },

@@ -29,7 +29,7 @@ const BreedSearch: React.FC = () => {
     searchContent = (
       <div className={classes.searchCard}>
         {filteredData.map((cat) => {
-          const link = "/breed/" + cat.id;
+          const link = `/breed/?breedId=${cat.id}`;
           return (
             <a key={cat.id} href={link} className={classes.searchCardLink}>
               {cat.name}
