@@ -14,22 +14,23 @@
     padding: 20px 10%;
 }
 
-.footer img {
+.footerLogo{
     filter: invert(99%) sepia(8%) saturate(358%) hue-rotate(278deg) brightness(117%) contrast(100%);
 }
 
-.footer i {
+.footerIcon {
+    display: inline;
     color: white;
     padding: 4px 10px 0 0;
 }
 
-.footer p {
+.footerText {
     display: inline;
     color: white;
     font-weight: 200;
 }
 
-.footer a {
+.footerLink{
     font-weight: 400;
     text-decoration: none;
     color: white;

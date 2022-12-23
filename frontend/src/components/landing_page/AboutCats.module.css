@@ -54,18 +54,21 @@
 }
 
 .catImage3 {
+    display: inline;
     width: 100%;
     min-width: 250px;
     margin: 5px;
 }
 
 .catImage2 {
+    display: inline;
     width: 100%;
     min-width: 250px;
     margin: 5px;
 }
 
 .catImage1 {
+    display: inline;
     width: 70%;
     min-width: 175px;
     position: relative;
