@@ -1,6 +1,11 @@
+
+
+
 .sectionContainer {
     max-width: 1248px;
-    position: relative;
+    margin: 0 auto;
+    padding: 0 96px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .detailContainer {
@@ -27,12 +32,14 @@
     padding-bottom: 25px;
     margin: 0;
     font-weight: 600;
+    font-size: 36px;
 }
 
 .detailSubHeader {
     padding-bottom: 32px;
     font-size: 18px;
     color: black;
+    font-weight: 500;
 }
 
 .detailBody {
@@ -78,7 +85,7 @@
     height: 30px;
     gap: 8px;
     position: relative;
-    padding: 5px;
+    padding-top: 20px;
 }
 
 .shape {

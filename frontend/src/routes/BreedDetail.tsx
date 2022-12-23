@@ -148,7 +148,7 @@ const BreedDetail = () => {
             {constructAttributeElements(attributes)}
           </div>
         </div>
-        <Footer />
+
       </div>
       <h3>More Photos</h3>
     </section>

@@ -2,5 +2,10 @@
     margin: 0 auto;
     max-width: 1248px;
     padding: 30px 96px;
+}
 
+.layout {
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 0 96px;
 }

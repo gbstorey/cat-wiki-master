@@ -12,8 +12,7 @@ function Root() {
     <div className={classes.centralFrame}>
         <Hero />
         <Recommendations />
-        <AboutCats />
-        <Footer />
+        <AboutCats />s
     </div>
   )
 }
