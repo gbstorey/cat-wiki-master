@@ -1,0 +1,21 @@
+.attrContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+.attrDetails {
+    width: 25%;
+    min-width: 180px;
+}
+
+.attrBody {
+    padding-bottom: 1px;
+    display: inline-flex;
+}
+
+.detailSpan {
+    font-weight: bold;
+}

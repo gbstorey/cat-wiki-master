@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./RootLayout.module.css";
 import { Outlet } from "react-router-dom";
-import Footer from "../landing_page/Footer";
+import Footer from "./Footer";
 
 const RootLayout = () => {
   return (

@@ -25,76 +25,11 @@
     z-index: -1;
 }
 
-.detailHeader {
-    padding-bottom: 25px;
-    margin: 0;
-    font-weight: 600;
-    font-size: 36px;
-}
-
-.detailSubHeader {
-    padding-bottom: 32px;
-    font-size: 18px;
-    color: black;
-    font-weight: 500;
-}
-
-.detailBody {
-    padding-bottom: 32px;
-}
-
-.detailSpan {
-    font-weight: bold;
-}
-
 .detailImage {
     width: 25rem;
     height: 25rem;
     object-fit: cover;
     border-radius: 20px;
-}
-
-.right {
-    flex: 1;
-    max-width: 55%;
-}
-
-.attrContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
-    margin: 0;
-}
-
-.attrDetails {
-    width: 25%;
-    min-width: 180px;
-}
-
-.attrBody {
-    padding-bottom: 1px;
-    display: inline-flex;
-}
-
-.shapeBox {
-    display: inline-flex;
-    height: 30px;
-    gap: 8px;
-    position: relative;
-    padding-top: 20px;
-}
-
-.shape {
-    flex-shrink: initial;
-    width: 3.5rem;
-    height: 0.7rem;
-    background-color: #544439;
-    border-radius: 8px;
-}
-
-.nullShape {
-    background-color: #dedede;
 }
 
 .photosHeader {

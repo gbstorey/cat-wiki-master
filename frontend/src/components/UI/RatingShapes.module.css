@@ -1,0 +1,19 @@
+.shapeBox {
+    display: inline-flex;
+    height: 30px;
+    gap: 8px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.shape {
+    flex-shrink: initial;
+    width: 3.5rem;
+    height: 0.7rem;
+    background-color: #544439;
+    border-radius: 8px;
+}
+
+.nullShape {
+    background-color: #dedede;
+}

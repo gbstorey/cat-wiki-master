@@ -1,0 +1,18 @@
+.detailHeader {
+    padding-bottom: 25px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.detailSubHeader {
+    padding-bottom: 32px;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+
+.right {
+    flex: 1;
+    max-width: 55%;
+}
