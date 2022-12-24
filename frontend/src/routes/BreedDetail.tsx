@@ -28,6 +28,10 @@ type Detail = {
   string: string;
   value: string | number;
 };
+type Data = {
+  breedData: Breed,
+  imageResponse: string[]
+}
 
 function constructDetailElements(details: Detail[]) {
   let elements = [];
@@ -70,9 +74,12 @@ function constructAttributeElements(attributes: Detail[]) {
 
 const BreedDetail = () => {
   function getBreedData() {
-    return useLoaderData() as Breed;
+    return useLoaderData() as Data;
   }
-  const breed = getBreedData();
+  const data = getBreedData()
+  console.log(data)
+  const breed = data.breedData
+  const imageUrls = data.imageResponse
   const details = [
     {
       string: "Temperament: ",
@@ -141,9 +148,14 @@ const BreedDetail = () => {
             {constructAttributeElements(attributes)}
           </div>
         </div>
-
       </div>
-      <h3>More Photos</h3>
+      <h3 className={classes.photosHeader}>More Photos</h3>
+      <div className={classes.morePhotosFlex}>
+        {imageUrls.map(imageUrl => {
+          return <img className={classes.morePhotosImage}
+              src={imageUrl} alt={`${breed.name} Photo ${imageUrls.indexOf(imageUrl)}`}/>
+        })}
+      </div>
     </section>
   );
 };

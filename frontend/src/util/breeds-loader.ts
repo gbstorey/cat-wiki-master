@@ -9,8 +9,14 @@ const BreedsLoader = async () => {
 const SingleBreedLoader = async (request: LoaderFunctionArgs) => {
   const url = new URL(request.request.url);
   const breedId = url.searchParams.get("breedId");
-  const data = await axios.get(`http://localhost:3000/api/breed/?breedId=${breedId}`)
-  return data.data;
+  const breedResponse = await axios.get(`http://localhost:3000/api/breed/?breedId=${breedId}`)
+  const imageResponse = await axios.get(`http://localhost:3000/api/breedImages/?breedId=${breedId}`)
+  console.log(breedResponse)
+  console.log(imageResponse)
+  return {
+    breedData: breedResponse.data,
+    imageResponse: imageResponse.data
+  };
 }
 
 
