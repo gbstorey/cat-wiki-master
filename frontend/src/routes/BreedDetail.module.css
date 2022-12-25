@@ -16,7 +16,7 @@
 
 .detailShape {
     width: 84px;
-    height: 280px;
+    height: 17%;
     background-color: #DEC68B;
     border-radius: 14px;
     position: absolute;
@@ -26,8 +26,9 @@
 }
 
 .detailImage {
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20%;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -52,4 +53,25 @@
     height: 15rem;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.spinner {
+    width: 80%;
+    height: 80%;
+}
+
+.loadingContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* set this to your desired background color */
+}
+
+.left {
+    width: 45%;
 }

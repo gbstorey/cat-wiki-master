@@ -1,47 +1,62 @@
 import classes from "./BreedDetail.module.css";
-import { useLoaderData } from "react-router-dom";
+import { Await, useLoaderData } from "react-router-dom";
 import DetailsSection from "../components/breed_detail_page/DetailsSection";
-import { Data } from "../util/types";
+import { Suspense } from "react";
+import {BeatLoader} from "react-spinners";
 
 const BreedDetail = () => {
-  function getBreedData() {
-    return useLoaderData() as Data;
-  }
-  const data = getBreedData();
-  console.log("Data", data)
-  const breed = data.breedData;
-  const imageUrls = data.imageResponse;
+  const res = useLoaderData() as any;
   return (
-    <section className={classes.sectionContainer} id={breed.identifiers.name}>
-      <div className={classes.detailContainer}>
-        <div className={classes.left}>
-          <div className={classes.detailShape}></div>
-          <img
-            className={classes.detailImage}
-            src={breed.identifiers.imageUrl}
-            alt={breed.identifiers.name}
-          />
+    <section className={classes.sectionContainer}>
+      <Suspense fallback={
+        <div className={classes.loadingContainer}>
+          <BeatLoader/>
         </div>
-        <DetailsSection
-          identifiers={breed.identifiers}
-          details={breed.details}
-          attributes={breed.attributes}
-        />
-      </div>
-      <h3 className={classes.photosHeader}>More Photos</h3>
-      <div className={classes.morePhotosFlex}>
-        {imageUrls.map((imageUrl) => {
-          return (
-            <img
-              className={classes.morePhotosImage}
-              src={imageUrl}
-              alt={`${breed.identifiers.name} Photo ${imageUrls.indexOf(
-                imageUrl
-              )}`}
-            />
-          );
-        })}
-      </div>
+      }>
+        <Await
+          resolve={res.breedData}
+          errorElement={<p>Error loading data.</p>}
+        >
+          {(breedData) => (
+            <>
+              <div className={classes.detailContainer}>
+                <div className={classes.left}>
+                  <div className={classes.detailShape}></div>
+                  <img
+                    className={classes.detailImage}
+                    src={breedData.data.identifiers.imageUrl}
+                    alt={breedData.data.identifiers.name}
+                  />
+                </div>
+                <DetailsSection
+                  identifiers={breedData.data.identifiers}
+                  details={breedData.data.details}
+                  attributes={breedData.data.attributes}
+                />
+              </div>
+              <h3 className={classes.photosHeader}>More Photos</h3>
+            </>
+          )}
+        </Await>
+        <Await
+            resolve={res.imageResponse}
+            errorElement={<p>Error loading data.</p>}
+        >
+          {(imageResponse) => (
+              <div className={classes.morePhotosFlex}>
+                {imageResponse.data.map((imageUrl: string) => {
+                  return (
+                      <img
+                          className={classes.morePhotosImage}
+                          src={imageUrl}
+                          alt={`Photo ${imageResponse.data.indexOf(imageUrl)}`}
+                      />
+                  );
+                })}
+              </div>
+          )}
+        </Await>
+      </Suspense>
     </section>
   );
 };

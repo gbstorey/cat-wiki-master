@@ -7,5 +7,6 @@
 .layout {
     max-width: 1248px;
     margin: 0 auto;
+    padding: 0 5%;
     font-family: 'Montserrat', sans-serif;
 }
