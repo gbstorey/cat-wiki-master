@@ -13,92 +13,107 @@ exports.getCatNames = (req, res) => {
 
 exports.getSingleBreed = (req, res) => {
   const { breedId } = req.query;
-  Breed.findOne({ id: breedId }).lean()
-    .then(({
-             adaptability,
-             affection_level,
-             cfa_url,
-             child_friendly,
-             description,
-             grooming,
-             health_issues,
-             id,
-             image,
-             intelligence,
-             life_span,
-             name,
-             origin,
-             social_needs,
-             stranger_friendly,
-             temperament,
-             vcahospitals_url,
-             vetstreet_url
-           }) => {
-      const imageUrl = image.url;
-      console.log(origin)
-      const identifiers = {
-        id: id,
-        name: name,
-        description: description,
-        imageUrl,
-        vcahospitals_url: vcahospitals_url,
-        cfa_url: cfa_url,
-        vetstreet_url: vetstreet_url,
-      };
-      const details = [
-        {
-          string: "Temperament: ",
-          value: temperament,
-        },
-        {
-          string: "Origin: ",
-          value: origin,
-        },
-        {
-          string: "Life Span: ",
-          value: life_span,
-        },
-      ];
-      const attributes = [
-        {
-          string: "Adaptability: ",
-          value: adaptability,
-        },
-        {
-          string: "Affection Level: ",
-          value: affection_level,
-        },
-        {
-          string: "Child Friendly: ",
-          value: child_friendly,
-        },
-        {
-          string: "Grooming: ",
-          value: grooming,
-        },
-        {
-          string: "Intelligence: ",
-          value: intelligence,
-        },
-        {
-          string: "Health Issues: ",
-          value: health_issues,
-        },
-        {
-          string: "Social Needs: ",
-          value: social_needs,
-        },
-        {
-          string: "Stranger Friendly: ",
-          value: stranger_friendly,
-        },
-      ];
-      console.log("DATA", { identifiers, details, attributes });
-      res.send({ identifiers, details, attributes });
-    })
+  Breed.findOne({ id: breedId })
+    .lean()
+    .then(
+      ({
+        adaptability,
+        affection_level,
+        cfa_url,
+        child_friendly,
+        description,
+        grooming,
+        health_issues,
+        id,
+        image,
+        views,
+        intelligence,
+        life_span,
+        name,
+        origin,
+        social_needs,
+        stranger_friendly,
+        temperament,
+        vcahospitals_url,
+        vetstreet_url,
+      }) => {
+        const imageUrl = image.url;
+        console.log(origin);
+        const identifiers = {
+          id: id,
+          name: name,
+          description: description,
+          views: views,
+          imageUrl,
+          vcahospitals_url: vcahospitals_url,
+          cfa_url: cfa_url,
+          vetstreet_url: vetstreet_url,
+        };
+        const details = [
+          {
+            string: "Temperament: ",
+            value: temperament,
+          },
+          {
+            string: "Origin: ",
+            value: origin,
+          },
+          {
+            string: "Life Span: ",
+            value: life_span,
+          },
+        ];
+        const attributes = [
+          {
+            string: "Adaptability: ",
+            value: adaptability,
+          },
+          {
+            string: "Affection Level: ",
+            value: affection_level,
+          },
+          {
+            string: "Child Friendly: ",
+            value: child_friendly,
+          },
+          {
+            string: "Grooming: ",
+            value: grooming,
+          },
+          {
+            string: "Intelligence: ",
+            value: intelligence,
+          },
+          {
+            string: "Health Issues: ",
+            value: health_issues,
+          },
+          {
+            string: "Social Needs: ",
+            value: social_needs,
+          },
+          {
+            string: "Stranger Friendly: ",
+            value: stranger_friendly,
+          },
+        ];
+        console.log("Breed has been served successfully.", {identifiers});
+        res.send({ identifiers, details, attributes });
+      }
+    )
     .catch((err) => {
       res.send(err);
     });
+  Breed.findOne({ id: breedId }).then((doc) => {
+    if (doc.views) {
+      doc.views += 1;
+    } else {
+      doc.views = 1;
+    }
+    doc.save().catch((err) => {
+      console.log(err);
+    });
+  });
 };
 
 exports.getSingleBreedImages = (req, res) => {

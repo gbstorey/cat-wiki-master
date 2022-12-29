@@ -2,14 +2,9 @@ import React, {useState} from "react";
 import classes from "./BreedSearch.module.css"
 import useFilterNames from "../../util/use-filter-names";
 import {useLoaderData} from "react-router-dom";
+import {BreedName} from "../../util/types";
 
-type BreedName = {
-  id: string;
-  name: string;
-  vcahospitals_url: string;
-  cfa_url: string;
-  vetstreet_url: string;
-};
+
 
 const BreedSearch: React.FC = () => {
   const [searchFocused, setSearchFocused] = useState(false);

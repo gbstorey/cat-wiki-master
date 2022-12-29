@@ -1,30 +1,17 @@
 import RecommendationItem from "./RecommendationItem";
 import classes from "./Recommendations.module.css"
 import MiniHorizontalRule from "../UI/MiniHorizontalRule";
-const DUMMY_CATS = [
-    {
-        id: 1,
-        name: 'Bengal',
-        imageUrl: 'https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-06/Bengal.1.jpg?h=1f9aeeea&itok=-betxrGH'
-    },
-    {
-        id: 2,
-        name: 'Savannah',
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Savannah_Cat_portrait.jpg/1200px-Savannah_Cat_portrait.jpg'
-    },
-    {
-        id: 3,
-        name: 'Norwegian Forest Cat',
-        imageUrl: 'https://www.thesprucepets.com/thmb/TxIPoTL58BiFEMblaWfBAnGzz9w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/norwegian-forest-cat-4170085-fe84aa86023446c4b64236ddfbdefd2b.jpg'
-    },
-    {
-        id: 4,
-        name: 'Selkirk Rex',
-        imageUrl: 'https://www.hillspet.com/content/dam/cp-sites/hills/hills-pet/en_us/exported/cat-care/images/selkirk-rex-on-brown-background.jpg'
-    },
-]
+import {useLoaderData} from "react-router-dom";
+import {BreedName} from "../../util/types";
 
 const Recommendations = () => {
+    const nameData = useLoaderData() as BreedName[]
+    const sortedByViews = nameData
+        .filter(cat => cat.views)
+        .sort((a, b) => {
+        return b.views - a.views
+    })
+    console.log(sortedByViews)
     return (
         <section id={"recommendations"}>
             <div className={classes.container}>
@@ -40,8 +27,8 @@ const Recommendations = () => {
                     </a>
                 </div>
                 <div className={`${classes.contentContainer} ${classes.flexContainer}`}>
-                {DUMMY_CATS.map(cat => {
-                    return <RecommendationItem key={cat.id} name={cat.name} imageUrl={cat.imageUrl}/>
+                {sortedByViews.slice(0, 4).map(cat => {
+                    return <RecommendationItem key={cat.id} name={cat.name} imageUrl={cat.image.url}/>
                 })}
                 </div>
             </div>

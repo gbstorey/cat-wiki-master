@@ -40,3 +40,15 @@ export type Data = {
     breedData: {identifiers: Identifiers, details: Detail[], attributes: Detail[]}
     imageResponse: string[]
 }
+
+export type BreedName = {
+    id: string;
+    name: string;
+    image: {
+        url: string;
+    };
+    views: number;
+    vcahospitals_url: string;
+    cfa_url: string;
+    vetstreet_url: string;
+};
