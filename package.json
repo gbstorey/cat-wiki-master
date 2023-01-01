@@ -12,7 +12,7 @@
   "author": "Anurag Pramanik <p.anurag@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/react-router": "^5.1.19",
+    "@types/react-router": "^5.1.20",
     "axios": "^1.2.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
